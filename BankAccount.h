@@ -24,11 +24,11 @@ public:
     BankAccount(double bal, double air){
         if(bal < 0){
             cout << "Please enter postive number"<<endl;
-            exit(EXIT_FAILURE);
+            return;
         }
         if(air < 0){
             cout << "Please enter postive number"<<endl;
-            exit(EXIT_FAILURE);
+            return;
         }
         balance = bal;
         annualIntRate = air;
@@ -81,7 +81,7 @@ public:
         numWithdrawal++;
     }
     virtual void calcInt(){
-        balance += (annualIntRate/12.0)*balance;
+        balance += (annualIntRate/12.0) * balance;
     }
     virtual ServAndOwed monthlyProc(){
         balance -= mnCharges;
