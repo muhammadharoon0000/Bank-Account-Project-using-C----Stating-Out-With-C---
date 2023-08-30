@@ -19,7 +19,7 @@ int main()
 
     cout << "\nCreating Savings Account""";
     SavingsAccount savAcc(startingBalance, annualRate);
-    cout << "Done!\n";
+    cout << endl;
 
     double initProcessCharges;
     cout << "Enter monthly processing charges: Rs.";
@@ -36,11 +36,9 @@ int main()
 
     while(depos != -1){
         totalDepos += depos;
-
-        cout << fixed << setprecision(2);
         cout << "Performing deposit...\n";
         savAcc.deposit(depos);
-        cout << "Done!\n";
+        cout<<endl;
 
         cout << "\nBalance: Rs." << savAcc.getBalance();
         cout << "\nNumber of deposits: " << savAcc.getNumDeposits();
@@ -58,11 +56,9 @@ int main()
 
     while(withdr != -1){
         totalWithdr += withdr;
-
-        cout << fixed << setprecision(2);
         cout << "Performing withdrawal...\n";
         savAcc.withdraw(withdr);
-        cout << "Done!\n";
+        cout<<endl;
 
         cout << "\nBalance: Rs." << savAcc.getBalance();
         cout << "\nNumber of deposits: " << savAcc.getNumDeposits();

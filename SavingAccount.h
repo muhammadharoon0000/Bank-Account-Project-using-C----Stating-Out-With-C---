@@ -24,7 +24,7 @@ public:
             status = INACTIVE;
         }
     }
-    bool getStatus() const{
+    bool getStatus(){
         return status;
     }
     virtual void withdraw(double w){
@@ -34,7 +34,6 @@ public:
                 status = INACTIVE;
         }
         else{
-            cout << fixed << setprecision(2);
             cout << "Withdrawal failed! Savings account ";
             cout << "is inactive (Current balance: Rs";
             cout << balance << ")" << endl;

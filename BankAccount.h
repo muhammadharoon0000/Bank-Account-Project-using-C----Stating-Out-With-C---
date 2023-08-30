@@ -22,7 +22,6 @@ class BankAccount{
 
 public:
     BankAccount(double bal, double air){
-        //check for invalid input
         if(bal < 0){
             cout << "Please enter postive number"<<endl;
             exit(EXIT_FAILURE);
@@ -60,7 +59,7 @@ public:
     }
     void setAnnualIntRate(double air){
         while(air < 0){
-            cout << "Please enter positive values for annual interest"<<endl;
+            cout << "Please enter positive number for annual interest"<<endl;
             cin >> air;
         }
         annualIntRate = air;
